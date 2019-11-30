@@ -596,6 +596,20 @@
             if (!checkok) {
                 return;
             }
+            let tokenName = localStorage.getItem("tokenName");
+            let tokenValue = localStorage.getItem("tokenValue");
+            let authorizationName = localStorage.getItem("authorizationName");
+            let authorizationValue = localStorage.getItem("authorizationValue");
+            if(tokenName != null && tokenName != "" && tokenValue != null && tokenValue != "") {
+                if(bodydata) {
+                    bodydata[tokenName] = tokenValue;
+                }
+                querys[tokenName] = tokenValue;
+            }
+            if(authorizationName != null && authorizationName != ""
+                && authorizationValue != null && authorizationValue != "") {
+                headers[authorizationName] = authorizationValue;
+            }
             layer.load();
             if ($(".request-param .layui-upload-file").length <= 0) {
                 var ajaxopt = {

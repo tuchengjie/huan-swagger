@@ -36,7 +36,35 @@ layui.use(['layer', 'element', 'form', 'nlaytpl', 'nswagger', 'ncmntool', 'uploa
     $(".btn-clearurl").click(function () {
         $("#iptApiUrl").val('');
     });
-    
+    //设置全局参数
+    function setToken() {
+        if(localStorage.getItem("tokenName") != null) {
+            $("input[name='tokenName']").val(localStorage.getItem("tokenName"));
+        }
+        if(localStorage.getItem("tokenValue") != null) {
+            $("input[name='tokenValue']").val(localStorage.getItem("tokenValue"));
+        }
+        if(localStorage.getItem("authorizationName") != null) {
+            $("input[name='authorizationName']").val(localStorage.getItem("authorizationName"));
+        }
+        if(localStorage.getItem("authorizationValue") != null) {
+            $("input[name='authorizationValue']").val(localStorage.getItem("authorizationValue"));
+        }
+    }
+    //监听全局参数配置
+    $(document).delegate("input[name='tokenName']", "change", function(e){
+        localStorage.setItem("tokenName", $(this).val());
+    });
+    $(document).delegate("input[name='tokenValue']", "change", function(e){
+        localStorage.setItem("tokenValue", $(this).val());
+    });
+    $(document).delegate("input[name='authorizationName']", "change", function(e){
+        localStorage.setItem("authorizationName", $(this).val());
+    });
+    $(document).delegate("input[name='authorizationValue']", "change", function(e){
+        localStorage.setItem("authorizationValue", $(this).val());
+    });
+
     var apiTars = {
     	d: {},
     	p: {},
@@ -62,6 +90,9 @@ layui.use(['layer', 'element', 'form', 'nlaytpl', 'nswagger', 'ncmntool', 'uploa
                     nlaytpl.render(".main-body")("comp/tplHomeBody.html", apidoc, function () {
                         // 重新渲染组件效果
                         element.init();
+                        form.render(); //更新全部
+                        //设置全局参数
+                        setToken();
                     });
                 } else {
                     $((".layui-nav-itemed")).removeClass(("layui-nav-itemed"));

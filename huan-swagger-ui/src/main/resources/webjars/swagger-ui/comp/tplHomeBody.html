@@ -94,6 +94,57 @@
                     </table>
                 </div>
             </div>
+            <div class="layui-colla-item">
+                <h2 class="layui-colla-title">全局请求参数</h2>
+                <div class="layui-colla-content layui-show">
+                    <div class="layui-field-box">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="80">
+                                <col width="80">
+                                <col width="100">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>位置</th>
+                                <th>描述</th>
+                                <th>类型</th>
+                                <th>值</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td rowspan="2"><span class="api-badge">query</span></td>
+                                <td>Key</td>
+                                <td>string</td>
+                                <td><input type="text" name="tokenName" lay-filter="tokenName" placeholder="请输入"
+                                           autocomplete="off" class="layui-input" value=""></td>
+                            </tr>
+                            <tr>
+                                <td>Value</td>
+                                <td>string</td>
+                                <td><input type="text" name="tokenValue" lay-filter="tokenValue" placeholder="请输入"
+                                           autocomplete="off" class="layui-input" value=""></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><span class="api-badge">Headers</span></td>
+                                <td>Key</td>
+                                <td>string</td>
+                                <td><input type="text" name="authorizationName" lay-filter="authorizationName" placeholder="请输入"
+                                           autocomplete="off" class="layui-input" value=""></td>
+                            </tr>
+                            <tr>
+                                <td>Value</td>
+                                <td>string</td>
+                                <td><input type="text" name="authorizationValue" lay-filter="authorizationValue" placeholder="请输入"
+                                           autocomplete="off" class="layui-input" value=""></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </fieldset>
