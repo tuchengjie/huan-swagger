@@ -1,0 +1,138 @@
+/* Syntax highlighting for JSON objects */
+ul.json-dict, ol.json-array {
+  list-style-type: none;
+  margin: 0 0 0 1px;
+  border-left: 1px dotted #ccc;
+  padding-left: 2em;
+}
+.json-string {
+  color: #0B7500;
+}
+.json-literal {
+  color: #1E9FFF;
+  font-weight: bold;
+}
+.json-literal.json-litnull {
+	color: #ff5722;
+}
+/* Toggle button */
+a.json-toggle {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+a.json-toggle:focus {
+  outline: none;
+}
+a.json-toggle:before {
+  	color: #aaa;
+  	content: "\25BC"; /* down arrow */
+  	position: absolute;
+  	display: inline-block;
+  	width: calc(1em - 4px);
+  	height: 100%;
+	left: -25.5px;
+	font-size: 16px;
+	padding-left: 5px;
+}
+a.json-toggle.collapsed:before {
+  	transform: rotate(-90deg); /* Use rotated down arrow, prevents right arrow appearing smaller than down arrow in some browsers */
+ 	-ms-transform: rotate(-90deg);
+  	-webkit-transform: rotate(-90deg);
+  	margin-top: -1px;
+	width: 14px;
+	padding-left: 3px;
+	left: -24px;
+}
+
+/* Collapsable placeholder links */
+a.json-placeholder {
+  color: #aaa;
+  padding: 0 1em;
+  text-decoration: none;
+}
+a.json-placeholder:hover {
+  text-decoration: underline;
+}
+#layui-msg .con-msg li{
+	width: auto;
+}
+#layui-msg .con-msg .layui-code-p {
+	position: relative;
+	min-height: 200px;
+	font-size: 15px;
+	word-break: break-all;
+	font-weight: 300;
+	font-family: 'Courier New','Arial','Tahoma','Verdana';
+	background-color: #fff;
+	margin-left: 40px;
+	padding: 0 5px;
+	overflow: auto;
+}
+#layui-msg .con-msg .layui-code-p.togger-pad {
+	padding-left: 30px;
+}
+#layui-msg .con-msg span.layui-btn-group {
+	position: absolute;
+	right: 10px;
+}
+div[id^="editor-"] {
+	padding: 0;
+	font-family: 'Courier New','Arial','Tahoma','Verdana';
+}
+div[id^="editor-"] p.layui-editor {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+div[id^="editor-"]>div {
+	border-style: none !important;
+}
+div[id^="editor-"]>div:nth-last-child(1) {
+	height: 240px !important;
+}
+div[id^="editor-"] div[id^="text-"][contenteditable] {
+	overflow: auto;
+}
+div[id^="editor-"] div[contenteditable] p {
+	margin: 0;
+}
+.layui-col-orange {
+	color: #FFB800;
+}
+.layui-col-cyan {
+	color: #2F4056;
+}
+.layui-col-black {
+	color: #393D49;
+}
+.layui-col-blue {
+	color: #1E9FFF;
+}
+.layui-col-red {
+	color: #FF5722;
+}
+
+.layui-code-view {
+    display: block;
+    margin: 10px 0;
+    padding: 0;
+    border: 1px solid #e2e2e2;
+    border-left-width: 1px;
+    border-left-width: 6px;
+    background-color: #F2F2F2;
+    color: #333;
+    font-family: Courier New;
+    position: relative;
+	font-size: 12px;
+}
+.layui-code-h3 {
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #e2e2e2;
+    position: relative;
+	font-size: 12px;
+}

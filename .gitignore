@@ -1,0 +1,4 @@
+# Project exclude paths
+/huan-swagger-cores/target/
+/huan-swagger-ui/target/
+/swagger-ui-layer/target/
